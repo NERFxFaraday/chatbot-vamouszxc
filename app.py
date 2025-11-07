@@ -10,17 +10,12 @@ st.title("💬 Chatbot vamouszxc")
 # ================= Sidebar =================
 st.sidebar.title("⚙️ Kontrol vamouszxc Chatbot")
 
-# Gambar vamouszxc opsional
-asta_img_path = r"C:\UTS\vamouszxc.png"
-if Path(asta_img_path).exists():
-    st.sidebar.image(asta_img_path, caption="vamouszxc Chatbot", width=150)
-
 # ================= API Key Langsung =================
 API_KEY = "AIzaSyBrcG-TiL6nxcw951dFwWpUETRXx1VKuzg"  # Ganti dengan key asli kamu
 genai.configure(api_key=API_KEY)
 
 # ================= Mode Peran =================
-role = st.sidebar.selectbox("🎭 Pilih Mode Peran Asta:", [
+role = st.sidebar.selectbox("🎭 Pilih Mode Peran Vamouszxc:", [
     "Teman Santai",
     "Humoris",
     "Guru Sabar",
@@ -91,3 +86,4 @@ if user_input:
             placeholder.markdown(full_text)
 
     st.session_state.messages.append({"role": "assistant", "content": full_text})
+
