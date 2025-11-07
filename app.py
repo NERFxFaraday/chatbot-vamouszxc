@@ -4,19 +4,19 @@ import google.generativeai as genai
 from pathlib import Path
 
 # ---------------------- Konfigurasi UI ----------------------------
-st.set_page_config(page_title="Chatbot Asta", page_icon="💬", layout="wide")
-st.title("💬 Chatbot Asta")
+st.set_page_config(page_title="Chatbot vamouszxc", page_icon="💬", layout="wide")
+st.title("💬 Chatbot vamouszxc")
 
 # ================= Sidebar =================
-st.sidebar.title("⚙️ Kontrol Asta Chatbot")
+st.sidebar.title("⚙️ Kontrol vamouszxc Chatbot")
 
-# Gambar Asta opsional
-asta_img_path = r"C:\UTS\Asta.png"
+# Gambar vamouszxc opsional
+asta_img_path = r"C:\UTS\vamouszxc.png"
 if Path(asta_img_path).exists():
-    st.sidebar.image(asta_img_path, caption="Asta Chatbot", width=150)
+    st.sidebar.image(asta_img_path, caption="vamouszxc Chatbot", width=150)
 
 # ================= API Key Langsung =================
-API_KEY = "AIzaSyDTktXRrngdKy2yLfhsDdMBloH-38AqY5U"  # Ganti dengan key asli kamu
+API_KEY = "AIzaSyBrcG-TiL6nxcw951dFwWpUETRXx1VKuzg"  # Ganti dengan key asli kamu
 genai.configure(api_key=API_KEY)
 
 # ================= Mode Peran =================
@@ -39,7 +39,7 @@ GMODEL = genai.GenerativeModel("models/gemini-2.0-flash")
 if "messages" not in st.session_state:
     st.session_state.messages = [{
         "role": "assistant",
-        "content": "Halo! Asta siap membantu 🚀"
+        "content": "Halo! vamouszxc siap membantu 🚀"
     }]
 
 # ================= Tampilkan Chat =================
@@ -66,7 +66,7 @@ if user_input:
     context = "\n".join([f"{m['role']}: {m['content']}" for m in st.session_state.messages[-10:]])
 
     final_prompt = f"""
-    Kamu bernama Asta, asisten AI.
+    Kamu bernama vamouszxc, asisten AI.
     Peran yang harus kamu gunakan: **{role}**
     Instruksi gaya: {system_instruction}
 
